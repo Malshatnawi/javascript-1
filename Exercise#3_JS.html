@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise #3: Changing images</title>
+</head>
+<body>
+
+    <h1>Where do you want to pursue your education?</h1>
+    <select id="selectid" onchange="changeImg(this);">
+        <option class="options" value="Images/NoImage.png">Select</option>
+        <option class="options" value="Images/Canadaflag.png">Canada</option>
+        <option class="options" value="Images/germanyflag.png">Germany</option>
+        <option class="options" value="Images/jordanflag.png">Jordan</option>
+        <option class="options" value="Images/usaflag.png">USA</option>
+
+    </select>
+    <br>
+
+    <div id="mydiv" style="width: 17em; height: 17em; border: 0.5em solid black; margin-top: 1em;">
+        <img id="mypic" src="./Images/NoImage.png">
+    </div>
+
+
+    <script>
+        function changeImg(select){
+            var sel = document.getElementById("selectid");
+            var image = document.getElementById("mypic");
+            image.src=sel.value;
+        }
+    </script>
+    
+</body>
+</html>
